@@ -29,9 +29,6 @@ class Program
 			await page.GotoAsync("https://www.allclassical.org/programs/program-archive/");
 			Console.WriteLine("page loaded");
 
-			//List to store scraped data, see Shows.cs
-			var shows = new List<Shows>();
-
 			//select html elements in page that contain show name and description. Can use id's or css selectors
 			var showElements = page.Locator("#archive-list > div");
 
